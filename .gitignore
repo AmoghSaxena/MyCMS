@@ -1,0 +1,8 @@
+*/__pycache__/
+.ipython/
+*/migrations/
+.vscode
+
+!media_files/userlogos/
+media_files/*
+
