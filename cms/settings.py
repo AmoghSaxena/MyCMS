@@ -84,9 +84,9 @@ SHOW_ORIGINAL_MEDIA = True
 
 MAX_MEDIA_PER_PLAYLIST = 70
 # bytes, size of uploaded media
-UPLOAD_MAX_SIZE = 800 * 1024 * 1000 * 5
+UPLOAD_MAX_SIZE = 800 * 1024 * 1000 * 25
 
-MAX_CHARS_FOR_COMMENT = 10000  # so that it doesn't end up huge
+MAX_CHARS_FOR_COMMENT = 0  # so that it doesn't end up huge
 TIMESTAMP_IN_TIMEBAR = False  # shows timestamped comments in the timebar for videos
 ALLOW_MENTION_IN_COMMENTS = False  # allowing to mention other users with @ in the comments
 
@@ -445,7 +445,7 @@ LOCAL_INSTALL = False
 
 # this is an option to make the whole portal available to logged in users only
 # it is placed here so it can be overrided on local_settings.py
-GLOBAL_LOGIN_REQUIRED = False
+GLOBAL_LOGIN_REQUIRED = True
 
 # TODO: separate settings on production/development more properly, for now
 # this should be ok
