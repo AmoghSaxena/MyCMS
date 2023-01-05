@@ -30,10 +30,10 @@ LOAD_FROM_CDN = False
 LOGIN_ALLOWED = True  # whether the login button appears
 REGISTER_ALLOWED = True  # whether the register button appears
 UPLOAD_MEDIA_ALLOWED = True  # whether the upload media button appears
-CAN_LIKE_MEDIA = True  # whether the like media appears
-CAN_DISLIKE_MEDIA = True  # whether the dislike media appears
-CAN_REPORT_MEDIA = True  # whether the report media appears
-CAN_SHARE_MEDIA = True  # whether the share media appears
+CAN_LIKE_MEDIA = False  # whether the like media appears
+CAN_DISLIKE_MEDIA = False  # whether the dislike media appears
+CAN_REPORT_MEDIA = False  # whether the report media appears
+CAN_SHARE_MEDIA = False  # whether the share media appears
 # how many times an item need be reported
 # to get to private state automatically
 REPORTED_TIMES_THRESHOLD = 10
@@ -62,7 +62,7 @@ PRE_UPLOAD_MEDIA_MESSAGE = ""
 
 # email settings
 DEFAULT_FROM_EMAIL = "info@mediacms.io"
-EMAIL_HOST_PASSWORD = "xyz"
+EMAIL_HOST_PASSWORD = ""
 EMAIL_HOST_USER = "info@mediacms.io"
 EMAIL_USE_TLS = True
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
@@ -77,7 +77,7 @@ MEDIA_IS_REVIEWED = True  # whether an admin needs to review a media file.
 # it won't appear on public listings
 
 # if set to True the url for original file is returned to the API.
-SHOW_ORIGINAL_MEDIA = True
+SHOW_ORIGINAL_MEDIA = False
 # Keep in mind that nginx will serve the file unless there's
 # some authentication taking place. Check nginx file and setup a
 # basic http auth user/password if you want to restrict access
@@ -184,14 +184,14 @@ MINIMUM_RESOLUTIONS_TO_ENCODE = [240, 360]
 
 USERS_NOTIFICATIONS = {
     "MEDIA_ADDED": True,  # in use
-    "MEDIA_ENCODED": False,  # not implemented
+    "MEDIA_ENCODED": True,  # not implemented
     "MEDIA_REPORTED": True,  # in use
 }
 
 ADMINS_NOTIFICATIONS = {
     "NEW_USER": True,  # in use
     "MEDIA_ADDED": True,  # in use
-    "MEDIA_ENCODED": False,  # not implemented
+    "MEDIA_ENCODED": True,  # not implemented
     "MEDIA_REPORTED": True,  # in use
 }
 

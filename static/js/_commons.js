@@ -24839,17 +24839,20 @@
                     icon: "home",
                     text: "Home",
                     className: "nav-item-home"
-                }), o.PageStore.get("config-enabled").pages.featured && o.PageStore.get("config-enabled").pages.featured.enabled && e.push({
-                    link: f.featured,
-                    icon: "star",
-                    text: o.PageStore.get("config-enabled").pages.featured.title,
-                    className: "nav-item-featured"
-                }), o.PageStore.get("config-enabled").pages.recommended && o.PageStore.get("config-enabled").pages.recommended.enabled && e.push({
-                    link: f.recommended,
-                    icon: "done_outline",
-                    text: o.PageStore.get("config-enabled").pages.recommended.title,
-                    className: "nav-item-recommended"
-                }), o.PageStore.get("config-enabled").pages.latest && o.PageStore.get("config-enabled").pages.latest.enabled && e.push({
+                })
+                // , o.PageStore.get("config-enabled").pages.featured && o.PageStore.get("config-enabled").pages.featured.enabled && e.push({
+                //     link: f.featured,
+                //     icon: "star",
+                //     text: o.PageStore.get("config-enabled").pages.featured.title,
+                //     className: "nav-item-featured"
+                // })
+                // , o.PageStore.get("config-enabled").pages.recommended && o.PageStore.get("config-enabled").pages.recommended.enabled && e.push({
+                //     link: f.recommended,
+                //     icon: "done_outline",
+                //     text: o.PageStore.get("config-enabled").pages.recommended.title,
+                //     className: "nav-item-recommended"
+                // })
+                , o.PageStore.get("config-enabled").pages.latest && o.PageStore.get("config-enabled").pages.latest.enabled && e.push({
                     link: f.latest,
                     icon: "new_releases",
                     text: o.PageStore.get("config-enabled").pages.latest.title,
