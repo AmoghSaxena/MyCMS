@@ -8,7 +8,7 @@
 
 		<h1>Sign In</h1>
 
-		<p>If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.</p>
+		<!-- <p>If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.</p> -->
 
 		<form class="login" method="POST" action="{% url 'account_login' %}">
 		  {% csrf_token %}

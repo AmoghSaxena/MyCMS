@@ -220,7 +220,7 @@ def show_recommended_media(request, limit=100):
     else:
         media = list(models.Media.objects.filter(basic_query).order_by("-views", "-likes").prefetch_related("user")[:limit])
     random.shuffle(media)
-    return media
+    return None
 
 
 def show_related_media(media, request=None, limit=100):

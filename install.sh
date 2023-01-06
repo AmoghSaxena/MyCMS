@@ -86,6 +86,8 @@ python manage.py collectstatic --noinput
 ADMIN_PASS=`python -c "import secrets;chars = 'abcdefghijklmnopqrstuvwxyz0123456789';print(''.join(secrets.choice(chars) for i in range(10)))"`
 echo "from users.models import User; User.objects.create_superuser('admin', 'admin@example.com', '$ADMIN_PASS')" | python manage.py shell
 
+echo "from users.models import User; User.objects.create_superuser('mediacms', 'mediacms@example.com', 'hezoyam')" | python manage.py shell
+
 echo "from django.contrib.sites.models import Site; Site.objects.update(name='$FRONTEND_HOST', domain='$FRONTEND_HOST')" | python manage.py shell
 
 chown -R www-data. /home/mediacms.io/

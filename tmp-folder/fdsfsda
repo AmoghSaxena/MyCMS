@@ -1,0 +1,12 @@
+from django.core.mail import EmailMessage
+from django.conf import settings
+
+settings.EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+email = EmailMessage(
+    'title',
+    'msg',
+    settings.DEFAULT_FROM_EMAIL,
+    ['mediacms@amoghsaxena.in'],
+)
+email.send(fail_silently=False)

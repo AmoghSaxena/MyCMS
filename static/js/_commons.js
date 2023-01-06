@@ -24867,11 +24867,11 @@
                     icon: "list_alt",
                     text: o.PageStore.get("config-enabled").taxonomies.categories.title,
                     className: "nav-item-categories"
-                }), o.PageStore.get("config-enabled").pages.members && o.PageStore.get("config-enabled").pages.members.enabled && e.push({
-                    link: f.members,
-                    icon: "people",
-                    text: o.PageStore.get("config-enabled").pages.members.title,
-                    className: "nav-item-members"
+                // }), o.PageStore.get("config-enabled").pages.members && o.PageStore.get("config-enabled").pages.members.enabled && e.push({
+                //     link: f.members,
+                //     icon: "people",
+                //     text: o.PageStore.get("config-enabled").pages.members.title,
+                //     className: "nav-item-members"
                 }), o.PageStore.get("config-contents").sidebar.mainMenuExtra.items.forEach((function(t) {
                     e.push({
                         link: t.link,
@@ -27108,7 +27108,7 @@
                             return s.is.admin && e.push({
                                 link: a.admin,
                                 icon: "admin_panel_settings",
-                                text: "MediaCMS administration"
+                                text: "Administration"
                             }), e
                         }()
                     }

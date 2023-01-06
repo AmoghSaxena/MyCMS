@@ -110,7 +110,7 @@ function popupBottomNavItems() {
     items.push({
       link: links.admin,
       icon: 'admin_panel_settings',
-      text: 'MediaCMS administration',
+      text: 'Administration',
     });
   }
 

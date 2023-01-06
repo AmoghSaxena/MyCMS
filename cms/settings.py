@@ -9,7 +9,7 @@ DEBUG = False
 PORTAL_NAME = "MediaCMS"
 PORTAL_DESCRIPTION = ""
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = "Europe/London"
+TIME_ZONE = "Asia/Kolkata"
 
 # who can add media
 # valid options include 'all', 'email_verified', 'advancedUser'
@@ -46,7 +46,7 @@ ALLOW_RATINGS_CONFIRMED_EMAIL_ONLY = True
 # ip of the server should be part of this
 ALLOWED_HOSTS = ["*", "mediacms.io", "127.0.0.1", "localhost"]
 
-FRONTEND_HOST = "http://localhost"
+FRONTEND_HOST = "http://172.22.63.55:8086/"
 # this variable - along with SSL_FRONTEND_HOST is used on several places
 # as email where a URL need appear etc
 
@@ -61,14 +61,14 @@ VIDEO_PLAYER_FEATURED_VIDEO_ON_INDEX_PAGE = False
 PRE_UPLOAD_MEDIA_MESSAGE = ""
 
 # email settings
-DEFAULT_FROM_EMAIL = "info@mediacms.io"
-EMAIL_HOST_PASSWORD = ""
-EMAIL_HOST_USER = "info@mediacms.io"
+DEFAULT_FROM_EMAIL = "rohit@amoghsaxena.com"
+EMAIL_HOST_PASSWORD = "Hezoyam#123"
+EMAIL_HOST_USER = "rohit@amoghsaxena.com"
 EMAIL_USE_TLS = True
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
-EMAIL_HOST = "mediacms.io"
+EMAIL_HOST = "amoghsaxena.com"
 EMAIL_PORT = 587
-ADMIN_EMAIL_LIST = ["info@mediacms.io"]
+ADMIN_EMAIL_LIST = ["mediacms@amoghsaxena.in"]
 
 
 MEDIA_IS_REVIEWED = True  # whether an admin needs to review a media file.
@@ -77,7 +77,7 @@ MEDIA_IS_REVIEWED = True  # whether an admin needs to review a media file.
 # it won't appear on public listings
 
 # if set to True the url for original file is returned to the API.
-SHOW_ORIGINAL_MEDIA = False
+SHOW_ORIGINAL_MEDIA = True
 # Keep in mind that nginx will serve the file unless there's
 # some authentication taking place. Check nginx file and setup a
 # basic http auth user/password if you want to restrict access
@@ -106,7 +106,8 @@ TIME_TO_ACTION_ANONYMOUS = 10 * 60
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True  # new users need to specify email
-ACCOUNT_EMAIL_VERIFICATION = "optional"  # 'mandatory' 'none'
+# ACCOUNT_EMAIL_VERIFICATION = "optional"  # 'mandatory' 'none'
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"  # 'mandatory' 'none'
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_USERNAME_MIN_LENGTH = "4"
 ACCOUNT_ADAPTER = "users.adapter.MyAccountAdapter"
@@ -445,7 +446,7 @@ LOCAL_INSTALL = False
 
 # this is an option to make the whole portal available to logged in users only
 # it is placed here so it can be overrided on local_settings.py
-GLOBAL_LOGIN_REQUIRED = True
+GLOBAL_LOGIN_REQUIRED = False
 
 # TODO: separate settings on production/development more properly, for now
 # this should be ok
