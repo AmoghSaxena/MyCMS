@@ -119,9 +119,9 @@ def category_thumb_path(instance, filename):
 class Media(models.Model):
     """The most important model for MediaCMS"""
 
-    add_date = models.DateTimeField("Date produced", blank=True, null=True, db_index=True)
+    add_date = models.DateTimeField("Date Published", blank=True, null=True, db_index=True)
 
-    allow_download = models.BooleanField(default=True, help_text="Whether option to download media is shown")
+    allow_download = models.BooleanField(default=False, help_text="Whether option to download media is shown")
 
     category = models.ManyToManyField("Category", blank=True, help_text="Media can be part of one or more categories")
 
@@ -141,7 +141,7 @@ class Media(models.Model):
 
     edit_date = models.DateTimeField(auto_now=True)
 
-    enable_comments = models.BooleanField(default=True, help_text="Whether comments will be allowed for this media")
+    enable_comments = models.BooleanField(default=False, help_text="Whether comments will be allowed for this media")
 
     encoding_status = models.CharField(max_length=20, choices=MEDIA_ENCODING_STATUS, default="pending", db_index=True)
 

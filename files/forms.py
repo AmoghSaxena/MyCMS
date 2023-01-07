@@ -20,13 +20,13 @@ class MediaForm(forms.ModelForm):
             "add_date",
             "uploaded_poster",
             "description",
-            "state",
-            "enable_comments",
-            "featured",
+            # "state",
+            # "enable_comments",
+            # "featured",
             "thumbnail_time",
-            "reported_times",
-            "is_reviewed",
-            "allow_download",
+            # "reported_times",
+            # "is_reviewed",
+            # "allow_download",
         )
         widgets = {
             "tags": MultipleSelect(),
@@ -37,10 +37,10 @@ class MediaForm(forms.ModelForm):
         super(MediaForm, self).__init__(*args, **kwargs)
         if self.instance.media_type != "video":
             self.fields.pop("thumbnail_time")
-        if not is_mediacms_editor(user):
-            self.fields.pop("featured")
-            self.fields.pop("reported_times")
-            self.fields.pop("is_reviewed")
+        # if not is_mediacms_editor(user):
+        #     self.fields.pop("featured")
+        #     self.fields.pop("reported_times")
+        #     self.fields.pop("is_reviewed")
         self.fields["new_tags"].initial = ", ".join([tag.title for tag in self.instance.tags.all()])
 
     def clean_uploaded_poster(self):
@@ -52,9 +52,9 @@ class MediaForm(forms.ModelForm):
 
     def save(self, *args, **kwargs):
         data = self.cleaned_data
-        state = data.get("state")
-        if state != self.initial["state"]:
-            self.instance.state = get_next_state(self.user, self.initial["state"], self.instance.state)
+        # state = data.get("state")
+        # if state != self.initial["state"]:
+        #     self.instance.state = get_next_state(self.user, self.initial["state"], self.instance.state)
 
         media = super(MediaForm, self).save(*args, **kwargs)
         return media
