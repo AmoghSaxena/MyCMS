@@ -1431,7 +1431,8 @@
 
 				function pe(e) {
 					var t = e.link;
-					return window.MediaCMS.site.devEnv && (t = "#"), a.createElement("a", {
+					return null
+					window.MediaCMS.site.devEnv && (t = "#"), a.createElement("a", {
 						href: t,
 						rel: "nofollow",
 						title: "Edit subtitle",

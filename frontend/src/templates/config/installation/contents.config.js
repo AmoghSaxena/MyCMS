@@ -21,7 +21,7 @@ module.exports = {
       },
     ],
     belowNavMenu: null,
-    footer: 'Powered by <a href="#" title="digivalet" target="_blank">digivalet</a>',
+    footer: '<a href="#" title="digivalet" target="_blank">DigiPlex v1.0</a>',
   },
   uploader: {
     belowUploadArea: '',

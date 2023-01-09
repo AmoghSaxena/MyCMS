@@ -119,11 +119,11 @@ def category_thumb_path(instance, filename):
 class Media(models.Model):
     """The most important model for MediaCMS"""
 
-    add_date = models.DateTimeField("Date Published", blank=True, null=True, db_index=True)
+    add_date = models.DateTimeField("Date Created", blank=True, null=True, db_index=True)
 
     allow_download = models.BooleanField(default=False, help_text="Whether option to download media is shown")
 
-    category = models.ManyToManyField("Category", blank=True, help_text="Media can be part of one or more categories")
+    category = models.ManyToManyField("Category", blank=True, help_text="")
 
     channel = models.ForeignKey(
         "users.Channel",
@@ -154,6 +154,8 @@ class Media(models.Model):
     friendly_token = models.CharField(blank=True, max_length=12, db_index=True, help_text="Identifier for the Media")
 
     hls_file = models.CharField(max_length=1000, blank=True, help_text="Path to HLS file for videos")
+    
+    # hls_url = models.CharField(max_length=1000, blank=True, help_text="Path to HLS file for videos")
 
     is_reviewed = models.BooleanField(
         default=settings.MEDIA_IS_REVIEWED,
@@ -241,7 +243,7 @@ class Media(models.Model):
 
     tags = models.ManyToManyField("Tag", blank=True, help_text="select one or more out of the existing tags")
 
-    title = models.CharField(max_length=100, help_text="media title", blank=True, db_index=True)
+    title = models.CharField(max_length=100, help_text="", blank=True, db_index=True)
 
     thumbnail = ProcessedImageField(
         upload_to=original_thumbnail_file_path,
@@ -268,8 +270,8 @@ class Media(models.Model):
     )
 
     uploaded_poster = ProcessedImageField(
-        verbose_name="Upload image",
-        help_text="This image will characterize the media",
+        verbose_name="Upload Thumbnail",
+        help_text="",
         upload_to=original_thumbnail_file_path,
         processors=[ResizeToFit(width=720, height=None)],
         format="JPEG",

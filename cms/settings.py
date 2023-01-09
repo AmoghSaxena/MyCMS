@@ -61,13 +61,22 @@ VIDEO_PLAYER_FEATURED_VIDEO_ON_INDEX_PAGE = False
 PRE_UPLOAD_MEDIA_MESSAGE = ""
 
 # email settings
-DEFAULT_FROM_EMAIL = "rohit@amoghsaxena.com"
-EMAIL_HOST_PASSWORD = "Hezoyam#123"
-EMAIL_HOST_USER = "rohit@amoghsaxena.com"
-EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = "rohit@amoghsaxena.com"
+# EMAIL_HOST_PASSWORD = "Hezoyam#123"
+# EMAIL_HOST_USER = "rohit@amoghsaxena.com"
+# EMAIL_USE_TLS = True
+# SERVER_EMAIL = DEFAULT_FROM_EMAIL
+# EMAIL_HOST = "amoghsaxena.com"
+# EMAIL_PORT = 587
+# ADMIN_EMAIL_LIST = ["mediacms@amoghsaxena.in"]
+
+DEFAULT_FROM_EMAIL = "digiplex@digivaletusers.com"
+EMAIL_HOST_PASSWORD = "0c13fa80fee1457b0b7e"
+EMAIL_HOST_USER = "digiplex@digivaletusers.com"
+EMAIL_USE_TLS = False
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
-EMAIL_HOST = "amoghsaxena.com"
-EMAIL_PORT = 587
+EMAIL_HOST = "192.168.0.61"
+EMAIL_PORT = 25
 ADMIN_EMAIL_LIST = ["mediacms@amoghsaxena.in"]
 
 
@@ -446,7 +455,7 @@ LOCAL_INSTALL = False
 
 # this is an option to make the whole portal available to logged in users only
 # it is placed here so it can be overrided on local_settings.py
-GLOBAL_LOGIN_REQUIRED = False
+GLOBAL_LOGIN_REQUIRED = True
 
 # TODO: separate settings on production/development more properly, for now
 # this should be ok
@@ -481,6 +490,10 @@ if GLOBAL_LOGIN_REQUIRED:
     LOGIN_REQUIRED_IGNORE_PATHS = [
         r'/accounts/login/$',
         r'/accounts/logout/$',
-        r'/accounts/signup/$',
+        # r'/accounts/signup/$',
         r'/api/v[0-9]+/',
+        r'/accounts/password/$',
+        r'/accounts/password/reset/$',
+        r'/accounts/password/',
+        r'/accounts/password/reset/',
     ]

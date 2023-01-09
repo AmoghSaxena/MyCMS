@@ -24894,18 +24894,19 @@
                         icon: "video_library",
                         text: "My media",
                         className: "nav-item-my-media"
-                    })), n.saveMedia && e.push({
-                        link: c.playlists,
-                        icon: "playlist_play",
-                        text: "My playlists",
-                        className: "nav-item-my-playlists"
-                    })), e.length ? r.createElement(u.NavigationMenuList, {
+                    // })), n.saveMedia && e.push({
+                    //     link: c.playlists,
+                    //     icon: "playlist_play",
+                    //     text: "My playlists",
+                    //     className: "nav-item-my-playlists"
+                    }))), e.length ? r.createElement(u.NavigationMenuList, {
                         key: "main-second",
                         items: m(e)
                     }) : null
                 }(), function() {
                     var e = [];
-                    return o.PageStore.get("config-enabled").pages.history && o.PageStore.get("config-enabled").pages.history.enabled && e.push({
+                    return null
+                    o.PageStore.get("config-enabled").pages.history && o.PageStore.get("config-enabled").pages.history.enabled && e.push({
                         link: f.user.history,
                         icon: "history",
                         text: o.PageStore.get("config-enabled").pages.history.title,
@@ -24937,11 +24938,11 @@
                         icon: "miscellaneous_services",
                         text: "Manage users",
                         className: "nav-item-manage-users"
-                    }), n.manageComments && e.push({
-                        link: f.manage.comments,
-                        icon: "miscellaneous_services",
-                        text: "Manage comments",
-                        className: "nav-item-manage-comments"
+                    // }), n.manageComments && e.push({
+                    //     link: f.manage.comments,
+                    //     icon: "miscellaneous_services",
+                    //     text: "Manage comments",
+                    //     className: "nav-item-manage-comments"
                     }), e.length ? r.createElement(u.NavigationMenuList, {
                         key: "admin",
                         items: m(e)
@@ -25578,8 +25579,8 @@
                             ref: "SearchInput",
                             type: "text",
                             name: "aq",
-                            placeholder: "Search",
-                            "aria-label": "Search",
+                            placeholder: "Search...",
+                            "aria-label": "Search...",
                             value: this.state.queryVal,
                             onChange: this.onChange,
                             onFocus: this.onInputFocus,
@@ -25696,10 +25697,10 @@
                             label: (this.userIsAuthor ? "My " : "") + "Media",
                             link: l.LinksContext._currentValue.profile.media
                         }), l.MemberContext._currentValue.can.saveMedia ? r.createElement(_, {
-                            id: "playlists",
-                            isActive: "playlists" === this.props.type,
-                            label: (this.userIsAuthor ? "My " : "") + "Playlists",
-                            link: l.LinksContext._currentValue.profile.playlists
+                            // id: "playlists",
+                            // isActive: "playlists" === this.props.type,
+                            // label: (this.userIsAuthor ? "My " : "") + "Playlists",
+                            // link: l.LinksContext._currentValue.profile.playlists
                         }) : null, s.PageStore.get("config-options").pages.profile.includeHistory && this.userIsAuthor ? r.createElement(_, {
                             id: "history",
                             isActive: "history" === this.props.type,
@@ -29266,13 +29267,13 @@
                             icon: e.mainMenuExtraItems[n].icon,
                             className: e.mainMenuExtraItems[n].className
                         }), n += 1;
-                    if (void 0 !== e.navMenuItems)
-                        for (var r = 0; r < e.navMenuItems.length;) "string" == typeof e.navMenuItems[r].text && "string" == typeof e.navMenuItems[r].link && "string" == typeof e.navMenuItems[r].icon && t.navMenu.items.push({
-                            text: e.navMenuItems[r].text,
-                            link: e.navMenuItems[r].link,
-                            icon: e.navMenuItems[r].icon,
-                            className: e.navMenuItems[r].className
-                        }), r += 1;
+                    // if (void 0 !== e.navMenuItems)
+                    //     for (var r = 0; r < e.navMenuItems.length;) "string" == typeof e.navMenuItems[r].text && "string" == typeof e.navMenuItems[r].link && "string" == typeof e.navMenuItems[r].icon && t.navMenu.items.push({
+                    //         text: e.navMenuItems[r].text,
+                    //         link: e.navMenuItems[r].link,
+                    //         icon: e.navMenuItems[r].icon,
+                    //         className: e.navMenuItems[r].className
+                    //     }), r += 1;
                     "string" == typeof e.belowNavMenu && (t.belowNavMenu = e.belowNavMenu.trim()), "string" == typeof e.belowThemeSwitcher && (t.belowThemeSwitcher = e.belowThemeSwitcher.trim()), "string" == typeof e.footer && (t.footer = e.footer.trim())
                 }
                 return t

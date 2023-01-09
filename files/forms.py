@@ -9,7 +9,7 @@ class MultipleSelect(forms.CheckboxSelectMultiple):
 
 
 class MediaForm(forms.ModelForm):
-    new_tags = forms.CharField(label="Tags", help_text="a comma separated list of new tags.", required=False)
+    new_tags = forms.CharField(label="Tags", help_text="", required=False)
 
     class Meta:
         model = Media
@@ -23,7 +23,7 @@ class MediaForm(forms.ModelForm):
             # "state",
             # "enable_comments",
             # "featured",
-            "thumbnail_time",
+            # "thumbnail_time",
             # "reported_times",
             # "is_reviewed",
             # "allow_download",
@@ -35,8 +35,8 @@ class MediaForm(forms.ModelForm):
     def __init__(self, user, *args, **kwargs):
         self.user = user
         super(MediaForm, self).__init__(*args, **kwargs)
-        if self.instance.media_type != "video":
-            self.fields.pop("thumbnail_time")
+        # if self.instance.media_type != "video":
+        #     self.fields.pop("thumbnail_time")
         # if not is_mediacms_editor(user):
         #     self.fields.pop("featured")
         #     self.fields.pop("reported_times")
@@ -44,7 +44,7 @@ class MediaForm(forms.ModelForm):
         self.fields["new_tags"].initial = ", ".join([tag.title for tag in self.instance.tags.all()])
 
     def clean_uploaded_poster(self):
-        image = self.cleaned_data.get("uploaded_poster", False)
+        image = self.cleaned_data.get("uploaded_poster", True)
         if image:
             if image.size > 5 * 1024 * 1024:
                 raise forms.ValidationError("Image file too large ( > 5mb )")
