@@ -439,12 +439,10 @@ def create_hls(friendly_token):
             subprocess.run(cmd, stdout=subprocess.PIPE, shell=True)
             shutil.rmtree(output_dir)
             output_dir = existing_output_dir
-        pp = os.path.join(output_dir, "/master.m3u8")
-        # pp = f"/media/hls/{p}/master.m3u8"
+        pp = os.path.join(output_dir, "master.m3u8")
         if os.path.exists(pp):
             if media.hls_file != pp:
                 media.hls_file = pp
-                # media.hls_url = "/media/hls" + p + "master.m3u8"
                 media.save(update_fields=["hls_file"])
     return True
 

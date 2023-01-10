@@ -155,8 +155,6 @@ class Media(models.Model):
 
     hls_file = models.CharField(max_length=1000, blank=True, help_text="Path to HLS file for videos")
     
-    # hls_url = models.CharField(max_length=1000, blank=True, help_text="Path to HLS file for videos")
-
     is_reviewed = models.BooleanField(
         default=settings.MEDIA_IS_REVIEWED,
         db_index=True,

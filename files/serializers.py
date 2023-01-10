@@ -9,12 +9,10 @@ class MediaSerializer(serializers.ModelSerializer):
     # to be used in APIs as show related media
     user = serializers.ReadOnlyField(source="user.username")
     url = serializers.SerializerMethodField()
-    hls_url = "http://172.17.88.200:8089/media/hls/bdd19397c7d941cfb487196fbec20fa5/master.m3u8"
     api_url = serializers.SerializerMethodField()
     thumbnail_url = serializers.SerializerMethodField()
     author_profile = serializers.SerializerMethodField()
     author_thumbnail = serializers.SerializerMethodField()
-    hh = "hh hh"
 
     def get_url(self, obj):
         return self.context["request"].build_absolute_uri(obj.get_absolute_url())
@@ -57,6 +55,7 @@ class MediaSerializer(serializers.ModelSerializer):
             "url",
             "api_url",
             "hls_file",
+            "uid",
             "user",
             "title",
             "description",

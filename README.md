@@ -48,7 +48,7 @@ To run DigiPlex, through Docker Compose and through installing it on a server vi
 * [SMTP Config](docs/soon.md) page - `Coming Soon!!`
 * [Pre-Installation](docs/soon.md) page - `Coming Soon!!`
 * [Docker Compose](docs/docker-install.md) page
-* [Post-Installation](do)
+* [Post-Installation](docs/post-install.md)
 * [Developer Documentation](docs/developers_docs.md) page
 * [Admin Config](docs/admins_docs.md) page
 
