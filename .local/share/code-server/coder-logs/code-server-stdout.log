@@ -1,0 +1,23 @@
+[2023-01-10T07:52:14.340Z] info  code-server 4.9.1 f7989a4dfcf21085e52157a01924d79d708bcc05
+[2023-01-10T07:52:14.342Z] info  Using user-data-dir ~/data
+[2023-01-10T07:52:14.357Z] info  Using config file ~/.config/code-server/config.yaml
+[2023-01-10T07:52:14.357Z] info  HTTP server listening on http://0.0.0.0:8443/ 
+[2023-01-10T07:52:14.357Z] info    - Authentication is enabled
+[2023-01-10T07:52:14.357Z] info      - Using password from $PASSWORD
+[2023-01-10T07:52:14.357Z] info    - Not serving HTTPS 
+[2023-01-10T07:52:14.357Z] info    - Proxying the following domain:
+[2023-01-10T07:52:14.358Z] info      - *.code-server.my.domain
+[13:22:15] 
+
+
+
+
+[13:22:15] Extension host agent started.
+[13:22:24] [192.168.3.146][1c7dac00][ManagementConnection] New connection established.
+[13:22:26] [192.168.3.146][b9cf2b40][ExtensionHostConnection] New connection established.
+[13:22:26] [192.168.3.146][b9cf2b40][ExtensionHostConnection] <1093> Launched Extension Host Process.
+[13:22:51] [192.168.3.146][1c7dac00][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[13:22:51] [192.168.3.146][b9cf2b40][ExtensionHostConnection] <1093> Extension Host Process exited with code: 0, signal: null.
+[13:22:53] [192.168.3.146][4749714c][ManagementConnection] New connection established.
+[13:22:56] [192.168.3.146][299fa092][ExtensionHostConnection] New connection established.
+[13:22:56] [192.168.3.146][299fa092][ExtensionHostConnection] <2002> Launched Extension Host Process.

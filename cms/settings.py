@@ -496,4 +496,8 @@ if GLOBAL_LOGIN_REQUIRED:
         r'/accounts/password/reset/$',
         r'/accounts/password/',
         r'/accounts/password/reset/',
+        r'/admin/$',
+        r'/admin/',
+        r'/accounts/confirm-email/',
+        r'/accounts/confirm-email/$'
     ]
