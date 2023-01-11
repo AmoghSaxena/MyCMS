@@ -22,9 +22,9 @@ class UserForm(forms.ModelForm):
             "logo",
             "notification_on_comments",
             "is_featured",
-            "advancedUser",
-            "is_manager",
-            "is_editor",
+            # "advancedUser",
+            # "is_manager",
+            # "is_editor",
             # "allow_contact",
         )
 
@@ -40,10 +40,10 @@ class UserForm(forms.ModelForm):
     def __init__(self, user, *args, **kwargs):
         super(UserForm, self).__init__(*args, **kwargs)
         self.fields.pop("is_featured")
-        if not is_mediacms_manager(user):
-            self.fields.pop("advancedUser")
-            self.fields.pop("is_manager")
-            self.fields.pop("is_editor")
+        # if not is_mediacms_manager(user):
+        #     self.fields.pop("advancedUser")
+            # self.fields.pop("is_manager")
+            # self.fields.pop("is_editor")
 
 
 class ChannelForm(forms.ModelForm):

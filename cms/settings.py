@@ -6,7 +6,7 @@ DEBUG = False
 
 # PORTAL NAME, this is the portal title and
 # is also shown on several places as emails
-PORTAL_NAME = "MediaCMS"
+PORTAL_NAME = "DigiPlex"
 PORTAL_DESCRIPTION = ""
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "Asia/Kolkata"
@@ -46,7 +46,8 @@ ALLOW_RATINGS_CONFIRMED_EMAIL_ONLY = True
 # ip of the server should be part of this
 ALLOWED_HOSTS = ["*", "mediacms.io", "127.0.0.1", "localhost"]
 
-FRONTEND_HOST = "http://172.22.63.55:8086/"
+FRONTEND_HOST = "https://digiplex.digivalet.com"
+SSL_FRONTEND_HOST = "https://digiplex.digivalet.com"
 # this variable - along with SSL_FRONTEND_HOST is used on several places
 # as email where a URL need appear etc
 

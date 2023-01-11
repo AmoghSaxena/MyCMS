@@ -24933,11 +24933,11 @@
                         icon: "miscellaneous_services",
                         text: "Manage media",
                         className: "nav-item-manage-media"
-                    }), n.manageUsers && e.push({
-                        link: f.manage.users,
-                        icon: "miscellaneous_services",
-                        text: "Manage users",
-                        className: "nav-item-manage-users"
+                    // }), n.manageUsers && e.push({
+                    //     link: f.manage.users,
+                    //     icon: "miscellaneous_services",
+                    //     text: "Manage users",
+                    //     className: "nav-item-manage-users"
                     // }), n.manageComments && e.push({
                     //     link: f.manage.comments,
                     //     icon: "miscellaneous_services",

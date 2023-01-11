@@ -46,7 +46,7 @@ Visit [Releases Page](docs/release.md) for detailed Changelog
 To run DigiPlex, through Docker Compose and through installing it on a server via an automation script that installs and configures all needed services. Find the related pages:
  
 * [SMTP Config](docs/soon.md) page - `Coming Soon!!`
-* [Pre-Installation](docs/soon.md) page - `Coming Soon!!`
+* [Pre-Installation](docs/release.md) page - `Coming Soon!!`
 * [Docker Compose](docs/docker-install.md) page
 * [Post-Installation](docs/post-install.md)
 * [Developer Documentation](docs/developers_docs.md) page
