@@ -2,4 +2,4 @@ APP_NAME DigiPlex - MediaCMS
 COMPANY_NAME Digivalet.
 WEBSITE http://digivalet.com
 VERSION_MAJOR 1
-VERSION_MINOR 0.3
+VERSION_MINOR 0.4

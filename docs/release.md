@@ -1,4 +1,16 @@
 ```
+Changes between 1.0.4 and 1.0.3:
+--------------------------------
+
+Core:
+ * Modified Email Template.
+ * Updated Logo
+
+APIs:
+ * Added HLS Url in the API now.
+ * Added Category and Tags as well in the API.
+
+
 Changes between 1.0.3 and 1.0.2:
 --------------------------------
 
