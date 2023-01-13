@@ -1,4 +1,12 @@
 ```
+Changes between 1.0.5 and 1.0.4:
+--------------------------------
+
+Core:
+ * Modified Email cred system - system will read config from a file now.
+ * Updated Documentation for same.
+
+
 Changes between 1.0.4 and 1.0.3:
 --------------------------------
 

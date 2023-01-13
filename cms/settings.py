@@ -1,4 +1,6 @@
 import os
+import subprocess
+import json
 
 from celery.schedules import crontab
 
@@ -61,24 +63,23 @@ VIDEO_PLAYER_FEATURED_VIDEO_ON_INDEX_PAGE = False
 
 PRE_UPLOAD_MEDIA_MESSAGE = ""
 
-# email settings
-# DEFAULT_FROM_EMAIL = "rohit@amoghsaxena.com"
-# EMAIL_HOST_PASSWORD = "Hezoyam#123"
-# EMAIL_HOST_USER = "rohit@amoghsaxena.com"
-# EMAIL_USE_TLS = True
-# SERVER_EMAIL = DEFAULT_FROM_EMAIL
-# EMAIL_HOST = "amoghsaxena.com"
-# EMAIL_PORT = 587
-# ADMIN_EMAIL_LIST = ["mediacms@amoghsaxena.in"]
+try:
+    with open("smtp.json", "r") as f:
+        smtpData = json.load(f)
 
-DEFAULT_FROM_EMAIL = "digiplex@digivaletusers.com"
-EMAIL_HOST_PASSWORD = "0c13fa80fee1457b0b7e"
-EMAIL_HOST_USER = "digiplex@digivaletusers.com"
-EMAIL_USE_TLS = False
-SERVER_EMAIL = DEFAULT_FROM_EMAIL
-EMAIL_HOST = "192.168.0.61"
-EMAIL_PORT = 25
-ADMIN_EMAIL_LIST = ["mediacms@amoghsaxena.in"]
+    DEFAULT_FROM_EMAIL = smtpData['DEFAULT_FROM_EMAIL']
+    EMAIL_HOST_PASSWORD = smtpData['EMAIL_HOST_PASSWORD']
+    EMAIL_HOST_USER = smtpData['EMAIL_HOST_USER']
+    EMAIL_USE_TLS = smtpData['EMAIL_USE_TLS']
+    SERVER_EMAIL = smtpData['SERVER_EMAIL']
+    EMAIL_HOST = smtpData['EMAIL_HOST']
+    EMAIL_PORT = smtpData['EMAIL_PORT']
+    ADMIN_EMAIL_LIST = smtpData['ADMIN_EMAIL_LIST']
+
+except Exception as err:
+    print(err)
+    print("Unable to  Send Email")
+
 
 
 MEDIA_IS_REVIEWED = True  # whether an admin needs to review a media file.

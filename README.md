@@ -38,15 +38,15 @@ In terms of disk space, think of what the needs will be. A general rule is to mu
 
 ## Releases
 
-Visit [Releases Page](docs/release.md) for detailed Changelog
+Visit [Releases Page](release.md) for detailed Changelog
 
 
 ## Installation / Maintanance
 
 To run DigiPlex, through Docker Compose and through installing it on a server via an automation script that installs and configures all needed services. Find the related pages:
  
-* [SMTP Config](docs/soon.md) page - `Coming Soon!!`
-* [Pre-Installation](docs/release.md) page - `Coming Soon!!`
+* [Pre-Installation](docs/pre-install.md) page
+* [SMTP Config](docs/smtp.md) page
 * [Docker Compose](docs/docker-install.md) page
 * [Post-Installation](docs/post-install.md)
 * [Developer Documentation](docs/developers_docs.md) page

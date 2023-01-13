@@ -14,7 +14,7 @@
 - Step 1 [Clone this Repository]
 `https://dvgit.digivalet.com/scm/pyt/videocms.git`
 - Step 2 [Change the Working directory to the cloned directory]
-`cd auto-provision && git checkout dev`
+`cd videocms` - [select branch accordinly!]
 - Step 3 [Run the Cloud Server]
 `docker-compose up -d`
 
