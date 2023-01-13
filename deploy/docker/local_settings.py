@@ -1,4 +1,4 @@
-FRONTEND_HOST = 'http://digiplex.digivalet.com'
+FRONTEND_HOST = 'https://digiplex.digivalet.com'
 PORTAL_NAME = 'DigiPlex'
 SECRET_KEY = 'ma!s3^b-cw!f#7s6s0m3*jx77a@riw(7701**(r=ww%w!2+yk2'
 POSTGRES_HOST = 'db'
